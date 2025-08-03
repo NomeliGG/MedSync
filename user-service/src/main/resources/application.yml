@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:8100}
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    open-in-view: false
