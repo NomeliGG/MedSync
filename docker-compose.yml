@@ -47,7 +47,7 @@ services:
       "
       cqlsh cassandra -u cassandra -p cassandra -e
       \"
-      CREATE KEYSPACE IF NOT EXISTS medical_records
+      CREATE KEYSPACE IF NOT EXISTS diagnostics
       WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'};
       \"
       "
