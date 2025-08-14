@@ -1,3 +1,9 @@
+logging:
+  level:
+    org.springframework.web.servlet:
+      mvc.method.annotation.RequestResponseBodyMethodProcessor: TRACE
+      DispatcherServlet: TRACE
+
 server:
   port: ${SERVER_PORT:8100}
 
@@ -10,6 +16,8 @@ spring:
     password: ${DB_PASS}
   jpa:
     open-in-view: false
+  mvc:
+    log-request-details: true
 
 eureka:
   client:
