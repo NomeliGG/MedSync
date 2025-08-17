@@ -19,6 +19,7 @@
     <module>payment-service</module>
     <module>api-gateway</module>
     <module>discovery-service</module>
+    <module>platform</module>
   </modules>
 
   <properties>
