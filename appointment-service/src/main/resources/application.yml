@@ -1,6 +1,11 @@
 server:
   port: ${SERVER_PORT:8300}
 
+management:
+  endpoint:
+    health:
+      show-details: always
+
 spring:
   application:
     name: appointment-service
