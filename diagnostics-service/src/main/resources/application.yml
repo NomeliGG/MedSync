@@ -13,6 +13,11 @@ spring:
     username: ${CASSANDRA_USER:cassandra}
     password: ${CASSANDRA_PASS:cassandra}
 
+management:
+  endpoint:
+    health:
+      show-details: always
+
 eureka:
   client:
     service-url:

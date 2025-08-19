@@ -1,9 +1,22 @@
 server:
   port: ${SERVER_PORT:8500}
 
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
 spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_HOST:localhost:9092}
   application:
     name: notification-service
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
 
 eureka:
   client:

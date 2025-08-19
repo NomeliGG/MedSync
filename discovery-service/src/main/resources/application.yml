@@ -6,6 +6,10 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 
+management:
+  endpoint:
+    health:
+      show-details: always
 
 server:
   port: ${SERVER_PORT:8761}

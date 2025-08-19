@@ -5,6 +5,11 @@ logging:
         cloud.gateway: TRACE
         web.servlet.function: TRACE
 
+management:
+  endpoint:
+    health:
+      show-details: always
+
 server:
   port: ${SERVER_PORT:8000}
 
