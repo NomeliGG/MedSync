@@ -18,9 +18,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/local_db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
   jpa:
     open-in-view: false
   mvc:
