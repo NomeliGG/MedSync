@@ -6,6 +6,7 @@ import static org.springframework.cloud.gateway.server.mvc.filter.LoadBalancerFi
 import static org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http;
 import static org.springframework.cloud.gateway.server.mvc.predicate.GatewayRequestPredicates.path;
 
+import com.medtech.platform.web.service.Service;
 import java.util.Map.Entry;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Bean;
