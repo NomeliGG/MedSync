@@ -42,7 +42,7 @@ public class PlatformErrorDecoder implements ErrorDecoder {
         try {
             responseBodyBytes = response.body().asInputStream().readAllBytes();
         } catch (IOException e) {
-            throw new OperationFailedException("Unable to read all bytes of response body method during api call", e);
+            throw new OperationFailedException("Unable to read all bytes of response body during api call", e);
         }
         final InternalApiErrorOut apiError = objectMapper.toObject(responseBodyBytes, InternalApiErrorOut.class);
         final Map<String, Collection<String>> headers = response.headers();
