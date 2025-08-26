@@ -18,7 +18,12 @@ public class AbstractLogicException extends RuntimeException {
         super(message, cause);
     }
 
-    protected AbstractLogicException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    protected AbstractLogicException(
+            String message,
+            Throwable cause,
+            boolean enableSuppression,
+            boolean writableStackTrace
+    ) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
