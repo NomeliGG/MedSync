@@ -2,7 +2,7 @@ package com.medtech.paymentservice;
 
 import static com.medtech.platform.web.service.payment.PaymentApiInternal.BASE_URL;
 
-import com.medtech.platform.util.UtcClock;
+import com.medtech.platform.util.time.UtcClock;
 import com.medtech.platform.web.service.payment.PaymentApiInternal;
 import com.medtech.platform.web.service.payment.inout.PaymentIn;
 import com.medtech.platform.web.service.payment.inout.PaymentOut;

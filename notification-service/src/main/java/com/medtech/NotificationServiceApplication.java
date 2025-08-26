@@ -1,6 +1,6 @@
 package com.medtech;
 
-import com.medtech.platform.util.UtcClock;
+import com.medtech.platform.util.time.UtcClock;
 import java.util.Locale;
 import java.util.TimeZone;
 import org.springframework.boot.SpringApplication;
