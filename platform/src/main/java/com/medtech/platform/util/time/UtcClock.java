@@ -1,4 +1,4 @@
-package com.medtech.platform.util;
+package com.medtech.platform.util.time;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
