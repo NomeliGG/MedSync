@@ -1,11 +1,20 @@
 package com.medtech.appointment.controller;
 
-import com.medtech.appointment.inout.*;
+import com.medtech.appointment.inout.AppointmentBookIn;
+import com.medtech.appointment.inout.AppointmentCancelIn;
+import com.medtech.appointment.inout.AppointmentCancelOut;
+import com.medtech.appointment.inout.AppointmentRescheduleIn;
+import com.medtech.appointment.inout.AppointmentRescheduleOut;
+import com.medtech.appointment.inout.AppointmentViewOut;
 import com.medtech.appointment.service.AppointmentService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/appointments")

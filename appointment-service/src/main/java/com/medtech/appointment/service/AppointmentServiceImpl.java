@@ -1,7 +1,12 @@
 package com.medtech.appointment.service;
 
 import com.medtech.appointment.enums.Status;
-import com.medtech.appointment.inout.*;
+import com.medtech.appointment.inout.AppointmentBookIn;
+import com.medtech.appointment.inout.AppointmentCancelIn;
+import com.medtech.appointment.inout.AppointmentCancelOut;
+import com.medtech.appointment.inout.AppointmentRescheduleIn;
+import com.medtech.appointment.inout.AppointmentRescheduleOut;
+import com.medtech.appointment.inout.AppointmentViewOut;
 import com.medtech.appointment.mapper.AppointmentMapper;
 import com.medtech.appointment.model.Appointment;
 import com.medtech.appointment.model.Doctor;
@@ -13,12 +18,11 @@ import com.medtech.platform.exception.DataNotFoundException;
 import com.medtech.platform.exception.TimeSlotAlreadyBookedException;
 import com.medtech.platform.exception.WrongDataException;
 import jakarta.persistence.EntityNotFoundException;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional

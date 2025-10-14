@@ -1,6 +1,5 @@
 package com.medtech.appointment.mapper;
 
-
 import com.medtech.appointment.inout.AppointmentBookIn;
 import com.medtech.appointment.inout.AppointmentRescheduleOut;
 import com.medtech.appointment.inout.AppointmentViewOut;
@@ -12,7 +11,6 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface AppointmentMapper {
-
 
     @Mapping(target = "id", ignore = true)
     Appointment toModel(AppointmentBookIn in, Doctor doctor, Patient patient);
