@@ -15,7 +15,7 @@ import com.medtech.appointment.repository.AppointmentRepository;
 import com.medtech.appointment.repository.DoctorRepository;
 import com.medtech.appointment.repository.PatientRepository;
 import com.medtech.platform.exception.DataNotFoundException;
-import com.medtech.platform.exception.TimeSlotAlreadyBookedException;
+import com.medtech.appointment.exception.TimeSlotAlreadyBookedException;
 import com.medtech.platform.exception.WrongDataException;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;

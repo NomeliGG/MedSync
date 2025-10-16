@@ -2,17 +2,15 @@ package com.medtech.appointment.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public enum VisitType {
     CONSULTATION("consultation"),
     CHECKUP("checkup"),
     FOLLOWUP("followup");
 
     private final String code;
-
-    VisitType(String code) {
-        this.code = code;
-    }
 
     @JsonValue
     public String getCode() {

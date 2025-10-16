@@ -2,6 +2,7 @@ package com.medtech.appointment.model;
 
 import com.medtech.appointment.enums.Status;
 import com.medtech.appointment.enums.VisitType;
+import com.medtech.platform.util.time.UtcClock;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -61,12 +62,12 @@ public class Appointment {
 
     @PrePersist
     public void prePersist() {
-        created = LocalDateTime.now();
+        created = UtcClock.nowLocal();
         updated = created;
     }
 
     @PreUpdate
     public void preUpdate() {
-        updated = LocalDateTime.now();
+        updated = UtcClock.nowLocal();
     }
 }

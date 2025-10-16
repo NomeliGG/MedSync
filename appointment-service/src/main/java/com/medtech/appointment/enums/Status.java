@@ -2,7 +2,9 @@ package com.medtech.appointment.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public enum Status {
     BOOKED("booked"),
     CANCELLED_BY_PATIENT("cancelled_by_patient"),
@@ -10,10 +12,6 @@ public enum Status {
     COMPLETED("completed");
 
     private final String code;
-
-    Status(String code) {
-        this.code = code;
-    }
 
     @JsonValue
     public String getCode() {

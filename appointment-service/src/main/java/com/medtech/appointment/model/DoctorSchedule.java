@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +28,7 @@ public class DoctorSchedule {
     private Doctor doctor;
 
     @Column(name = "day_of_week")
-    private java.sql.Date dayOfWeek;
+    private LocalDate dayOfWeek;
 
     @Column(name = "work_interval", columnDefinition = "TIMERANGE")
     private String workInterval;
