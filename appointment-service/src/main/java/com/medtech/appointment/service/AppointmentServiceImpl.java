@@ -1,6 +1,7 @@
 package com.medtech.appointment.service;
 
 import com.medtech.appointment.enums.Status;
+import com.medtech.appointment.exception.TimeSlotAlreadyBookedException;
 import com.medtech.appointment.inout.AppointmentBookIn;
 import com.medtech.appointment.inout.AppointmentCancelIn;
 import com.medtech.appointment.inout.AppointmentCancelOut;
@@ -15,7 +16,6 @@ import com.medtech.appointment.repository.AppointmentRepository;
 import com.medtech.appointment.repository.DoctorRepository;
 import com.medtech.appointment.repository.PatientRepository;
 import com.medtech.platform.exception.DataNotFoundException;
-import com.medtech.appointment.exception.TimeSlotAlreadyBookedException;
 import com.medtech.platform.exception.WrongDataException;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
