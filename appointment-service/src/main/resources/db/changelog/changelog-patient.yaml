@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: roma
+      changes:
+        - createTable:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: first_name
+                  type: VARCHAR(128)
+              - column:
+                  name: last_name
+                  type: VARCHAR(128)
+              - column:
+                  name: email
+                  type: VARCHAR(250)
+              - column:
+                  name: address
+                  type: VARCHAR(512)
+              - column:
+                  name: sex
+                  type: CHAR(1)
+              - column:
+                  name: additional_info
+                  type: TEXT
