@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/appointments")
+@RequestMapping("/external/appointments")
 @RequiredArgsConstructor
 public class AppointmentExternalController {
 
@@ -47,7 +47,7 @@ public class AppointmentExternalController {
             @PathVariable("id") Long id,
             @RequestBody AppointmentRescheduleIn in
     ) {
-        return appointmentService.reschedule(in);
+        return appointmentService.reschedule(id, in);
     }
 
     @GetMapping("/patient/{patientId}")

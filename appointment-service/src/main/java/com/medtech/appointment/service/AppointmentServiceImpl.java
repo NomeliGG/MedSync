@@ -93,8 +93,8 @@ public class AppointmentServiceImpl implements AppointmentService {
 
     @Override
     @Transactional
-    public AppointmentRescheduleOut reschedule(AppointmentRescheduleIn in) {
-        Appointment appointment = findById(in.appointmentId());
+    public AppointmentRescheduleOut reschedule(Long appointmentId, AppointmentRescheduleIn in) {
+        Appointment appointment = findById(appointmentId);
 
         // TODO integrate with Doctor Working Hours to validate new slot availability
 

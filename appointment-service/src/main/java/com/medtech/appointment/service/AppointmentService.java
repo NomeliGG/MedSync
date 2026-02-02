@@ -16,7 +16,7 @@ public interface AppointmentService {
 
     AppointmentCancelOut cancelByDoctor(AppointmentCancelIn in);
 
-    AppointmentRescheduleOut reschedule(AppointmentRescheduleIn in);
+    AppointmentRescheduleOut reschedule(Long id, AppointmentRescheduleIn in);
 
     List<AppointmentViewOut> getAppointmentsByPatient(Long patientId);
 

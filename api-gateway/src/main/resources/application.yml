@@ -33,8 +33,9 @@ eureka:
 
 routing:
   routes:
-    user-service: /users
-    payment-service: /payments
+    user-service: /usr
+    appointment-service: /appt
+    payment-service: /pay
 
 cors:
   registry:

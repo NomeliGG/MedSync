@@ -15,7 +15,9 @@ public interface AppointmentMapper {
     @Mapping(target = "id", ignore = true)
     Appointment toModel(AppointmentBookIn in, Doctor doctor, Patient patient);
 
+    @Mapping(target = "appointmentId", source = "id")
     AppointmentViewOut toViewOut(Appointment appointment);
 
+    @Mapping(target = "appointmentId", source = "id")
     AppointmentRescheduleOut toRescheduleOut(Appointment appointment);
 }
