@@ -1,5 +1,6 @@
 package com.medtech.platform.messaging.common;
 
+import static com.medtech.platform.messaging.common.DomesticMessageHeader.SENDER_SERVICE;
 import static com.medtech.platform.messaging.common.MessagingUtils.headerOf;
 
 import com.medtech.platform.web.service.Service;
@@ -43,7 +44,7 @@ public class ServiceAwareKafkaTemplate<K, V> extends KafkaTemplate<K, V> {
 
     @Override
     public CompletableFuture<SendResult<K, V>> send(ProducerRecord<K, V> producerRecord) {
-        final RecordHeader senderServiceHeader = headerOf(DomesticMessageHeader.SENDER_SERVICE, senderService.getDiscoveryServiceId());
+        final RecordHeader senderServiceHeader = headerOf(SENDER_SERVICE, senderService.getDiscoveryServiceId());
         producerRecord.headers().add(senderServiceHeader);
         return super.send(producerRecord);
     }

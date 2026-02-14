@@ -7,7 +7,8 @@ import lombok.experimental.UtilityClass;
 public class DomesticMessageHeader {
 
     /**
-     * This header must contain a {@link Service#getDiscoveryServiceId()} value of a service that created and sent message to a topic.
+     * This header must contain a {@link Service#getDiscoveryServiceId()} value of a service
+     * that created and sent message to a topic.
      */
     public static final String SENDER_SERVICE = "sender-service";
 

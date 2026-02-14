@@ -1,10 +1,11 @@
 package com.medtech.platform.outbox;
 
+import static com.medtech.platform.messaging.common.DomesticMessageHeader.IDEMPOTENCY_KEY;
+import static com.medtech.platform.messaging.common.DomesticMessageHeader.TYPE_ID;
 import static com.medtech.platform.messaging.common.MessagingUtils.headerOf;
 import static com.medtech.platform.outbox.OutboxConfig.OUTBOX_TASK_EXECUTOR_QUALIFIER;
 import static com.medtech.platform.outbox.OutboxProperties.SCHEDULER_PREFIX;
 
-import com.medtech.platform.messaging.common.DomesticMessageHeader;
 import com.medtech.platform.persistence.projection.LongId;
 import jakarta.annotation.PostConstruct;
 import java.util.List;
@@ -92,8 +93,8 @@ public class OutboxRelay {
 
         final OutboxEntity outbox = maybeOutbox.get();
         try {
-            final RecordHeader typeIdHeader = headerOf(DomesticMessageHeader.TYPE_ID, outbox.getPayloadTypeId());
-            final RecordHeader idempotencyHeader = headerOf(DomesticMessageHeader.IDEMPOTENCY_KEY, outbox.getIdempotencyKey());
+            final RecordHeader typeIdHeader = headerOf(TYPE_ID, outbox.getPayloadTypeId());
+            final RecordHeader idempotencyHeader = headerOf(IDEMPOTENCY_KEY, outbox.getIdempotencyKey());
             final ProducerRecord<String, String> producerRecord = new ProducerRecord<>(
                     outbox.getTargetTopic(),
                     null,

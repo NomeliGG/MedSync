@@ -101,10 +101,11 @@ public class KafkaMessagingConfig {
         return new ServiceAwareKafkaTemplate<>(producerFactory, serviceMessagingProperties.getCurrentService());
     }
 
-
-
     @Bean(CONSUMER_FACTORY_QUALIFIER)
-    ConsumerFactory<String, Object> kafkaConsumerFactory(KafkaProperties kafkaProperties, ServiceMessagingProperties serviceMessagingProperties) {
+    ConsumerFactory<String, Object> kafkaConsumerFactory(
+            KafkaProperties kafkaProperties,
+            ServiceMessagingProperties serviceMessagingProperties
+    ) {
         final Map<String, Object> configs = kafkaProperties.buildConsumerProperties();
         configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);

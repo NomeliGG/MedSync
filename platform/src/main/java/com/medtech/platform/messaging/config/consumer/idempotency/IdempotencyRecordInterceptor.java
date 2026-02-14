@@ -16,7 +16,10 @@ public class IdempotencyRecordInterceptor implements RecordInterceptor<String, O
     private final ProcessedMessageRepository processedMessageRepository;
 
     @Override
-    public ConsumerRecord<String, Object> intercept(ConsumerRecord<String, Object> record, Consumer<String, Object> consumer) {
+    public ConsumerRecord<String, Object> intercept(
+            ConsumerRecord<String, Object> record,
+            Consumer<String, Object> consumer
+    ) {
         final Header idempotencyHeader = record.headers().lastHeader(DomesticMessageHeader.IDEMPOTENCY_KEY);
         if (idempotencyHeader == null) {
             return record;
