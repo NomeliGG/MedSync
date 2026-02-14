@@ -1,5 +1,6 @@
 package com.medtech.platform.web.service;
 
+import jakarta.annotation.Nullable;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.UtilityClass;
@@ -28,6 +29,19 @@ public enum Service {
         public static final String DIAGNOSTICS_SERVICE = "diagnostics-service";
         public static final String APPOINTMENT_SERVICE = "appointment-service";
 
+    }
+
+    @Nullable
+    public static Service fromDiscoveryId(@Nullable String discoveryId) {
+        if (discoveryId == null || discoveryId.isBlank()) {
+            return null;
+        }
+        for (var v : values()) {
+            if (v.getDiscoveryServiceId().equals(discoveryId)) {
+                return v;
+            }
+        }
+        return null;
     }
 
 }

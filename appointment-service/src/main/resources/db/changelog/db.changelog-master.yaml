@@ -7,3 +7,5 @@ databaseChangeLog:
       file: db/changelog/changelog-doctor_schedule.yaml
   - include:
       file: db/changelog/changelog-appointment.yaml
+  - include:
+      file: db/changelog/changelog-outbox.yaml
