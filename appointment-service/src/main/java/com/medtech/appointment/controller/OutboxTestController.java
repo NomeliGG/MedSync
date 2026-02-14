@@ -1,9 +1,9 @@
 package com.medtech.appointment.controller;
 
-import com.medtech.platform.outbox.factory.OutboxMessageData;
 import com.medtech.platform.messaging.payment.PaymentServiceTopic;
 import com.medtech.platform.messaging.payment.dto.PaymentCreationRequestedDto;
 import com.medtech.platform.outbox.factory.OutboxFactory;
+import com.medtech.platform.outbox.factory.OutboxMessageData;
 import com.medtech.platform.outbox.store.OutboxRequest;
 import com.medtech.platform.outbox.store.OutboxRequestStorage;
 import java.security.SecureRandom;
@@ -33,9 +33,15 @@ public class OutboxTestController {
     @PostMapping
     @Transactional
     public void test() {
-        final var dto = new PaymentCreationRequestedDto(UUID.randomUUID().toString(), random.nextDouble(1, 1000), LocalDate.now());
+        final var dto = new PaymentCreationRequestedDto(
+                UUID.randomUUID().toString(),
+                random.nextDouble(1, 1000),
+                LocalDate.now()
+        );
         final OutboxMessageData messageData = OutboxMessageData.of(dto.appointmentId(), dto);
-        final OutboxRequest outboxRequest = outboxFactory.createOutboxRequest(PaymentServiceTopic.NEW_PAYMENT_REQUESTED, messageData);
+        final OutboxRequest outboxRequest = outboxFactory.createOutboxRequest(
+                PaymentServiceTopic.NEW_PAYMENT_REQUESTED, messageData
+        );
         outboxRequestStorage.store(outboxRequest);
 
         log.info("Message sent to {}", PaymentServiceTopic.NEW_PAYMENT_REQUESTED);

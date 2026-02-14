@@ -28,7 +28,8 @@ public class IdempotencyRecordInterceptor implements RecordInterceptor<String, O
         final String idempotencyKey = new String(idempotencyHeader.value());
         if (processedMessageRepository.existsById(idempotencyKey)) {
             log.info("Message [{}] is already processed", idempotencyKey);
-            record.headers().remove(DomesticMessageHeader.IDEMPOTENCY_KEY); // do not store processed message on success
+            // do not even try store processed message on success
+            record.headers().remove(DomesticMessageHeader.IDEMPOTENCY_KEY);
             return null;
         }
         return record;
