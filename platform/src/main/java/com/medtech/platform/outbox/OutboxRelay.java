@@ -92,6 +92,10 @@ public class OutboxRelay {
         }
 
         final OutboxEntity outbox = maybeOutbox.get();
+        if (outbox.getStatus() == OutboxStatus.COMPLETED) {
+            return;
+        }
+
         try {
             final RecordHeader typeIdHeader = headerOf(TYPE_ID, outbox.getPayloadTypeId());
             final RecordHeader idempotencyHeader = headerOf(IDEMPOTENCY_KEY, outbox.getIdempotencyKey());
