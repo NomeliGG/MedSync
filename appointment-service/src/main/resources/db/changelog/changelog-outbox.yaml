@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: borjom1
+      changes:
+        - createTable:
+            tableName: outbox
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: idempotency_key
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: message_key
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: payload
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: payload_type_id
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: target_topic
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(24)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: attempts
+                  type: int
+                  defaultValueNumeric: '0'
+                  constraints:
+                    nullable: false
+              - column:
+                  name: error
+                  type: text
+              - column:
+                  name: created_at
+                  type: datetime
+                  defaultValueComputed: 'now()'
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  defaultValueComputed: 'now()'
+                  constraints:
+                    nullable: false

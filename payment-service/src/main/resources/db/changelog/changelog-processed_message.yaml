@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: borjom1
+      changes:
+        - createTable:
+            tableName: processed_message
+            columns:
+              - column:
+                  name: idempotency_key
+                  type: varchar(128)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  defaultValueComputed: 'now()'
+                  constraints:
+                    nullable: false

@@ -29,6 +29,7 @@
     <maven.checkstyle.plugin.configLocation>checkstyle.xml</maven.checkstyle.plugin.configLocation>
     <spring.cloud.version>2025.0.0</spring.cloud.version>
     <spring.boot.version>3.5.4</spring.boot.version>
+    <spring.kafka.version>3.3.11</spring.kafka.version>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
   </properties>
