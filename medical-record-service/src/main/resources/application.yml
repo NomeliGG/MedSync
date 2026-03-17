@@ -9,7 +9,14 @@ spring:
     username: ${DB_USER:postgres}
     password: ${DB_PASS:postgres}
   jpa:
+    hibernate:
+      ddl-auto: validate
     open-in-view: false
+    properties:
+      hibernate:
+        default_schema: medical_record
+  liquibase:
+    default-schema: medical_record
 
 eureka:
   client:
