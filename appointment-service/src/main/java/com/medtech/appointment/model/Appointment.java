@@ -37,10 +37,10 @@ public class Appointment {
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
-    @Column(name = "start_time")
+    @Column(name = "start_time", columnDefinition = "TIMESTAMP")
     private LocalDateTime startTime;
 
-    @Column(name = "end_time")
+    @Column(name = "end_time", columnDefinition = "TIMESTAMP")
     private LocalDateTime endTime;
 
     @Enumerated(EnumType.STRING)
@@ -54,10 +54,10 @@ public class Appointment {
     @Column(name = "reason", columnDefinition = "TEXT")
     private String reason;
 
-    @Column(name = "created")
+    @Column(name = "created", columnDefinition = "TIMESTAMP")
     private LocalDateTime created;
 
-    @Column(name = "updated")
+    @Column(name = "updated", columnDefinition = "TIMESTAMP")
     private LocalDateTime updated;
 
     @PrePersist

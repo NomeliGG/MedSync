@@ -1,6 +1,7 @@
 package com.medtech.platform.persistence;
 
 import com.medtech.platform.util.time.UtcClock;
+import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PreUpdate;
 import jakarta.validation.constraints.NotNull;
@@ -14,9 +15,11 @@ import lombok.Setter;
 public abstract class AuditableEntity {
 
     @NotNull
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime createdAt;
 
     @NotNull
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime updatedAt;
 
     @PreUpdate

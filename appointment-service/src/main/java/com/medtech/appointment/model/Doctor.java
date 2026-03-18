@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,10 +28,10 @@ public class Doctor {
     @Column(name = "last_name", length = 128)
     private String lastName;
 
-    @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    @Column(name = "date_of_birth", columnDefinition = "DATE")
+    private LocalDate dateOfBirth;
 
-    @Column(name = "sex", length = 1)
+    @Column(name = "sex", columnDefinition = "bpchar")
     private String sex;
 
     @Column(name = "additional_info", columnDefinition = "TEXT")
