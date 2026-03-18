@@ -9,5 +9,3 @@ databaseChangeLog:
       file: db/changelog/changelog-appointment.yaml
   - include:
       file: db/changelog/changelog-outbox.yaml
-  - include:
-      file: db/changelog/changelog-processed_message.yaml
