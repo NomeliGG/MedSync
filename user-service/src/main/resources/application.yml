@@ -22,7 +22,14 @@ spring:
     username: ${DB_USER:postgres}
     password: ${DB_PASS:postgres}
   jpa:
+    hibernate:
+      ddl-auto: validate
     open-in-view: false
+    properties:
+      hibernate:
+        default_schema: user_schema
+  liquibase:
+    default-schema: user_schema
   mvc:
     log-request-details: true
   data:

@@ -27,18 +27,18 @@ public class DoctorSchedule {
     @JoinColumn(name = "doctor_id", nullable = false)
     private Doctor doctor;
 
-    @Column(name = "day_of_week")
+    @Column(name = "day_of_week", columnDefinition = "DATE")
     private LocalDate dayOfWeek;
 
-    @Column(name = "work_interval", columnDefinition = "TIMERANGE")
+    @Column(name = "work_interval", columnDefinition = "TSRANGE")
     private String workInterval;
 
-    @Column(name = "break_interval", columnDefinition = "TIMERANGE")
+    @Column(name = "break_interval", columnDefinition = "TSRANGE")
     private String breakInterval;
 
-    @Column(name = "created")
+    @Column(name = "created", columnDefinition = "TIMESTAMP")
     private LocalDateTime created;
 
-    @Column(name = "updated")
+    @Column(name = "updated", columnDefinition = "TIMESTAMP")
     private LocalDateTime updated;
 }

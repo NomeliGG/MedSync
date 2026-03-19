@@ -11,7 +11,15 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:http://localhost:9092}
   jpa:
+    hibernate:
+      ddl-auto: validate
     open-in-view: false
+    properties:
+      hibernate:
+        default_schema: payment
+  liquibase:
+    default-schema: payment
+    change-log: classpath:db/changelog/db.changelog-master.yaml
 
 eureka:
   client:

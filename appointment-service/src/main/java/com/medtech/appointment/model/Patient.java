@@ -33,7 +33,7 @@ public class Patient {
     @Column(name = "address", length = 512)
     private String address;
 
-    @Column(name = "sex", length = 1)
+    @Column(name = "sex", columnDefinition = "bpchar")
     private String sex;
 
     @Column(name = "additional_info", columnDefinition = "TEXT")

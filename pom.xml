@@ -32,10 +32,16 @@
     <spring.kafka.version>3.3.11</spring.kafka.version>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
+    <preliquibase.version>1.6.0</preliquibase.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>net.lbruun.springboot</groupId>
+        <artifactId>preliquibase-spring-boot-starter</artifactId>
+        <version>${preliquibase.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
