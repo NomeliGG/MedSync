@@ -1,4 +1,4 @@
-package com.medtech.config;
+package com.medtech.notification.config;
 
 import com.medtech.platform.exception.api.PlatformExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

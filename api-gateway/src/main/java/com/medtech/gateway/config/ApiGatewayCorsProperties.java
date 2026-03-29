@@ -1,4 +1,4 @@
-package com.medtech.config;
+package com.medtech.gateway.config;
 
 import jakarta.annotation.Nullable;
 import jakarta.validation.Valid;

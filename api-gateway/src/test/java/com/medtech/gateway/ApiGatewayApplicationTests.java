@@ -1,4 +1,4 @@
-package com.medtech;
+package com.medtech.gateway;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
