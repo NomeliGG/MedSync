@@ -1,4 +1,4 @@
-package com.medtech.config;
+package com.medtech.gateway.config;
 
 import com.medtech.platform.web.service.Service;
 import jakarta.validation.Valid;

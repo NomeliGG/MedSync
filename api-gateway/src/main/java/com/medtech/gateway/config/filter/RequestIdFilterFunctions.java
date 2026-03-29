@@ -1,4 +1,4 @@
-package com.medtech.config.filter;
+package com.medtech.gateway.config.filter;
 
 import java.util.UUID;
 import lombok.experimental.UtilityClass;

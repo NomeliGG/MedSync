@@ -1,4 +1,4 @@
-package com.medtech.config;
+package com.medtech.notification.config;
 
 import com.medtech.platform.util.mapper.PlatformObjectMapperBuilderCustomizer;
 import com.medtech.platform.util.mapper.SimpleObjectMapper;

@@ -1,6 +1,6 @@
-package com.medtech.config;
+package com.medtech.gateway.config;
 
-import static com.medtech.config.filter.RequestIdFilterFunctions.identified;
+import static com.medtech.gateway.config.filter.RequestIdFilterFunctions.identified;
 import static org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.rewritePath;
 import static org.springframework.cloud.gateway.server.mvc.filter.LoadBalancerFilterFunctions.lb;
 import static org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http;
