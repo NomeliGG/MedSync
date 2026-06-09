@@ -1,6 +1,6 @@
 package com.medtech.platform.messaging.common;
 
-import com.medtech.platform.web.service.Service;
+import com.medtech.platform.web.micro.Service;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass

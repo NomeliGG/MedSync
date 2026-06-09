@@ -1,4 +1,4 @@
-package com.medtech.platform.web.service;
+package com.medtech.platform.web.micro;
 
 import com.medtech.platform.util.mapper.SimpleObjectMapper;
 import feign.codec.ErrorDecoder;

@@ -1,4 +1,4 @@
-package com.medtech.platform.web.service;
+package com.medtech.platform.web.micro;
 
 import jakarta.annotation.Nullable;
 import lombok.Getter;

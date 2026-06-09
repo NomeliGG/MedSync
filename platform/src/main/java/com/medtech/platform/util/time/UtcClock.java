@@ -16,4 +16,8 @@ public class UtcClock {
         return Instant.now().atZone(UTC_ZONE_ID).toLocalDateTime();
     }
 
+    public static LocalDateTime toDateTime(Instant instant) {
+        return instant.atZone(UTC_ZONE_ID).toLocalDateTime();
+    }
+
 }

@@ -7,6 +7,7 @@ import com.medtech.appointment.inout.AppointmentRescheduleIn;
 import com.medtech.appointment.inout.AppointmentRescheduleOut;
 import com.medtech.appointment.inout.AppointmentViewOut;
 import com.medtech.appointment.service.AppointmentService;
+import com.medtech.platform.web.security.session.DefaultUserSession;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,7 +52,10 @@ public class AppointmentExternalController {
     }
 
     @GetMapping("/patient/{patientId}")
-    public List<AppointmentViewOut> getByPatient(@PathVariable("patientId") Long patientId) {
+    public List<AppointmentViewOut> getByPatient(
+            DefaultUserSession session,
+            @PathVariable("patientId") Long patientId
+    ) {
         return appointmentService.getAppointmentsByPatient(patientId);
     }
 

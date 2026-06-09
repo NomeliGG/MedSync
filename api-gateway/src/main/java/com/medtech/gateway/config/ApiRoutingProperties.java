@@ -1,6 +1,6 @@
 package com.medtech.gateway.config;
 
-import com.medtech.platform.web.service.Service;
+import com.medtech.platform.web.micro.Service;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

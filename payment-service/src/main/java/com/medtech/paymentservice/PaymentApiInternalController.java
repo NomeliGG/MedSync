@@ -1,11 +1,11 @@
 package com.medtech.paymentservice;
 
-import static com.medtech.platform.web.service.payment.PaymentApiInternal.BASE_URL;
+import static com.medtech.platform.web.micro.payment.PaymentApiInternal.BASE_URL;
 
 import com.medtech.platform.util.time.UtcClock;
-import com.medtech.platform.web.service.payment.PaymentApiInternal;
-import com.medtech.platform.web.service.payment.inout.PaymentIn;
-import com.medtech.platform.web.service.payment.inout.PaymentOut;
+import com.medtech.platform.web.micro.payment.PaymentApiInternal;
+import com.medtech.platform.web.micro.payment.inout.PaymentIn;
+import com.medtech.platform.web.micro.payment.inout.PaymentOut;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

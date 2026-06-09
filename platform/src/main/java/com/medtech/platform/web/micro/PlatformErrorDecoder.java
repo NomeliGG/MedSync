@@ -1,4 +1,4 @@
-package com.medtech.platform.web.service;
+package com.medtech.platform.web.micro;
 
 import com.medtech.platform.exception.BadRequestException;
 import com.medtech.platform.exception.DataNotFoundException;

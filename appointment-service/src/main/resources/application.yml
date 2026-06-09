@@ -25,6 +25,11 @@ spring:
   liquibase:
     default-schema: appointment
     change-log: classpath:db/changelog/db.changelog-master.yaml
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER_URI:http://localhost:9000/realms/medsync}
 
 eureka:
   client:

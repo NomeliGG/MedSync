@@ -1,7 +1,7 @@
-package com.medtech.platform.web.service.payment;
+package com.medtech.platform.web.micro.payment;
 
-import com.medtech.platform.web.service.PlatformFeignClientConfig;
-import com.medtech.platform.web.service.Service;
+import com.medtech.platform.web.micro.PlatformFeignClientConfig;
+import com.medtech.platform.web.micro.Service;
 import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(

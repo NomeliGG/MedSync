@@ -4,7 +4,7 @@ import com.medtech.platform.messaging.common.DomesticMessageHeader;
 import com.medtech.platform.messaging.config.KafkaMessagingConfig;
 import com.medtech.platform.messaging.payment.PaymentServiceTopic;
 import com.medtech.platform.messaging.payment.dto.PaymentCreationRequestedDto;
-import com.medtech.platform.web.service.Service;
+import com.medtech.platform.web.micro.Service;
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.annotation.KafkaListener;

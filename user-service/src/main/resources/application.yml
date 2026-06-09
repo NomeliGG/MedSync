@@ -37,6 +37,11 @@ spring:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
       password: ${REDIS_PASSWORD:}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER_URI:http://localhost:9000/realms/medsync}
 
 eureka:
   client:

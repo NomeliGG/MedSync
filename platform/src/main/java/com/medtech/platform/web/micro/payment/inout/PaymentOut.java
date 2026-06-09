@@ -1,4 +1,4 @@
-package com.medtech.platform.web.service.payment.inout;
+package com.medtech.platform.web.micro.payment.inout;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;

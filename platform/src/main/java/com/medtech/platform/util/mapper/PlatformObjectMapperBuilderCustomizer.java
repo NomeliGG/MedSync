@@ -12,6 +12,7 @@ public class PlatformObjectMapperBuilderCustomizer implements Jackson2ObjectMapp
     @Override
     public void customize(Jackson2ObjectMapperBuilder builder) {
         builder.modules(new JavaTimeModule());
+//        builder.featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         builder.postConfigurer(objectMapper -> objectMapper
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL)
         );

@@ -3,7 +3,7 @@ package com.medtech.platform.messaging.common;
 import static com.medtech.platform.messaging.common.DomesticMessageHeader.SENDER_SERVICE;
 import static com.medtech.platform.messaging.common.MessagingUtils.headerOf;
 
-import com.medtech.platform.web.service.Service;
+import com.medtech.platform.web.micro.Service;
 import java.util.concurrent.CompletableFuture;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.header.internals.RecordHeader;
